@@ -72,7 +72,6 @@ def go(config: DictConfig):
                 "input_artifact": "preprocessed_data.csv:latest",
                 "artifact_root": "data",
                 "artifact_type": "segregated_data",
-                "random_seed": config["main"]["random_seed"],
                 "test_size": config["data"]["test_size"],
                 "stratify": config["data"]["stratify"],
             },
