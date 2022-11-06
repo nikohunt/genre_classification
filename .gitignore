@@ -131,3 +131,6 @@ dmypy.json
 # mlflow
 mlruns/
 outputs/
+
+# wandb
+*/wandb
