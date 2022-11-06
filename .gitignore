@@ -134,6 +134,7 @@ outputs/
 
 # wandb
 */wandb
+evaluate/artifacts
 
 # data
 *.parquet
