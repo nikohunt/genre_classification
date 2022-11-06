@@ -134,3 +134,6 @@ outputs/
 
 # wandb
 */wandb
+
+# data
+*.parquet
