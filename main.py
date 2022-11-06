@@ -65,8 +65,17 @@ def go(config: DictConfig):
 
     if "segregate" in steps_to_execute:
 
-        ## YOUR CODE HERE: call the segregate step
-        pass
+        _ = mlflow.run(
+            os.path.join(root_path, "segregate"),
+            "main",
+            parameters={
+                "input_artifact": "preprocessed_data.csv:latest",
+                "artifact_root": "data",
+                "artifact_type": "segregated_data",
+                "test_size": config["data"]["test_size"],
+                "stratify": config["data"]["stratify"],
+            },
+        )
 
     if "random_forest" in steps_to_execute:
 
